@@ -1,9 +1,12 @@
 import React from 'react';
+import './TodoSearch.css'
 
 function TodoSearch() {
-  return <div>
-      <input type="text" placeholder="procastination"></input>
-  </div>;
+  return (
+      <input  className="TodoSearch" 
+      type="text"
+      placeholder="Insert New Task..."/>
+  )
 }
 
 export default TodoSearch;
