@@ -1,9 +1,9 @@
 import React from 'react';
 import './TodoSearch.css'
 
-function TodoSearch() {
+function TodoSearch({searchValue,setSearchValue}) {
   
-  const [searchValue, setSearchValue] = React.useState('');
+  // const [searchValue, setSearchValue] = React.useState('');
   // const [patito, setPatito] = React.useState('Patito')
   // [
   //   'Rafa',
@@ -14,15 +14,14 @@ function TodoSearch() {
     console.log(e.target.value);
     setSearchValue(e.target.value)
   }
-  return [
+  return (
       <input  className="TodoSearch" 
       type="text"
       placeholder="Insert New Task..."
       value={searchValue}
       onChange={onSearchValueChange}
-      />,
-      <p>{searchValue}</p>
-  ];
+      />
+      );
 }
 
 export default TodoSearch;
