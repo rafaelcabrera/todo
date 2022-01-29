@@ -19,8 +19,8 @@ function TodoItem(props) {
       >
         √
       </span>
-                
-      <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>{props.text}</p>
+                {/* AGREGO ESTILOS CON LÓGICA */}
+      <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>{props.text}</p> 
 
       <span className="Icon Icon-delete"
       onClick={onDelete}>
