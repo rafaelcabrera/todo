@@ -7,6 +7,8 @@ import {TodoItem} from '../TodoItem/TodoItem';
 import {TodoList} from '../TodoList/TodoList';
 import TodoSearch from '../TodoSearch/TodoSearch';
 
+import {AppUI} from './AppUI'
+
 const defaultTodos = [
   {text:'Turno alergista' , completed: true},
   {text:'Comprar monitor' , completed: false},
@@ -35,31 +37,17 @@ function App() {
 }
 
   return (
-    <React.Fragment>
-    <TodoCounter
-    total ={totalTodos}
-    completed ={completedTodos}
+    <AppUI
+    totalTodos={totalTodos}
+    completedTodos={completedTodos}
+    searchValue={searchValue}
+    setSearchValue={setSearchValue}
+    searchedTodos={searchedTodos}
+
+
     />
 
-    <TodoSearch
-    searchValue = {searchValue}
-    setSearchValue = {setSearchValue}
-    />
-    
-    <TodoList>
-      {searchedTodos.map(todo=> ( // el estado todo, va a ser igual a searched si no hay búsqueda
-        
-        <TodoItem key={todo.text} 
-        text={todo.text} 
-        completed = {todo.completed}/>
-        
-        ))}
-      
-    </TodoList>
-    <CreateTodoButton />
-    
-    </React.Fragment>
-  );
+  )
 }
 
 export default App;
