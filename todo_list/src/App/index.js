@@ -3,7 +3,7 @@ import { AppUI } from './AppUI';
 
 function App() {
   const localStorageTodos = localStorage.getItem('TODOS_V1');
-  let parsedTodos;
+  let parsedTodos;//parsedtodos es ahora mi estado por defecto.
 
   if (!localStorageTodos) {
     localStorage.setItem('TODOS_V1', JSON.stringify([]));
@@ -13,6 +13,7 @@ function App() {
   }
 
   
+
   const [todos, setTodos] = React.useState(parsedTodos);
   const [searchValue, setSearchValue] = React.useState('');
 
