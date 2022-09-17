@@ -1,5 +1,6 @@
 import React from "react";
 import {CreateTodoButton} from '../CreateTodoButton/CreateTodoButton';
+import { Modal } from "../Modal";
 import {TodoCounter} from '../TodoCounter/TodoCounter';
 import {TodoItem} from '../TodoItem/TodoItem';
 import {TodoList} from '../TodoList/TodoList';
@@ -37,6 +38,11 @@ function AppUI({
             ))}
           
         </TodoList>
+
+      <Modal>
+        <p>{searchedTodos[0]?.text}</p>
+      </Modal>
+
         <CreateTodoButton />
         
         </React.Fragment>
